@@ -1,0 +1,15 @@
+FROM mysql:latest
+
+# Set environment variables for MySQL
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_USER=${DB_USER}
+ENV MYSQL_PASSWORD=${DB_PASSWORD}
+
+# Copy the database.sql file to the container
+COPY database.sql /docker-entrypoint-initdb.d/
+
+# Expose port 3007 for external connection
+EXPOSE 3007
+
+# Start MySQL server
+CMD ["mysqld"]

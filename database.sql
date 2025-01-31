@@ -1,0 +1,10 @@
+CREATE DATABASE Audit;
+
+CREATE TABLE despliegues (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Aplicacion VARCHAR(50) NOT NULL,
+    Fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Repositorio VARCHAR(150) NOT NULL,
+    Finalizacion ENUM('Bien', 'Mal') NOT NULL,
+    Rama VARCHAR(100) NOT NULL
+);
