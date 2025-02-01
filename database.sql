@@ -34,5 +34,5 @@ CREATE DATABASE SensorData;
     CREATE TABLE sensor (
         Name VARCHAR(50) PRIMARY KEY,
         Batery Double NOT NULL,
-        Estado ENUM('Activado', 'Desactivado') NOT NULL
+        Estado ENUM('Active', 'Desactivate') NOT NULL
     );
